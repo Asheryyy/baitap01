@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../dangnhap/dangnhap.csproj" Id="cffc244a-01d9-4fbb-8749-d1cd80322e79" />
+  <Project Path="../hienthi3/hienthi3.csproj" Id="f36ab7ed-8522-4966-8780-a3d765af1a2f" />
+  <Project Path="dki.csproj" Id="64a1aa33-2f37-43d9-ac5b-9ce75b92e3a2" />
+</Solution>
