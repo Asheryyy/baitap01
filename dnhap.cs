@@ -16,5 +16,45 @@ namespace dangnhap1
         {
             InitializeComponent();
         }
+        private void btnĐK_Click(object sender, EventArgs e)
+        {
+            frmĐK f = new frmĐK();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtDN.Text == "admin" && txtMK.Text == "admin") // thay admin = tai khoan tren database
+            {
+                MessageBox.Show("Đăng nhập thành công !");
+                this.Hide();
+                frmHien f = new frmHien();
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu , vui lòng nhập lại");
+            }
+        }
+        private void txtMK_TextChanged(object sender, EventArgs e)
+        {
+            txtMK.PasswordChar = '*';
+        }
+        private void chkHide_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkHide.Checked)
+            {
+                txtMK.PasswordChar = '\0';
+                picShow.Hide();
+                picHide.Show();
+            }
+            else
+            {
+                txtMK.PasswordChar = '*';
+                picShow.Show();
+                picHide.Hide();
+            }
+        }
     }
 }
